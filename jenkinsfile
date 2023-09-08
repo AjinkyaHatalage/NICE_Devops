@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage("checkout code"){
+            steps{
+                sh "git clone https://github.com/AjinkyaHatalage/NICE_Devops.git"
+            }
+        }
+        stage("check dock version"){
+            steps{
+                sh "sudo docker version"
+            }
+        }
+    }
+}
